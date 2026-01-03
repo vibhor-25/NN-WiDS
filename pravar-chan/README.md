@@ -14,4 +14,4 @@ What I learned:
 Challenges faced:
 - Syntax and the use of different libraries included in the Python file 
 - Model training and retrieval of the data for the same
-- Carefully noting and analyzing the predicted data Lkekoefkoe
+- Carefully noting and analyzing the predicted data 
