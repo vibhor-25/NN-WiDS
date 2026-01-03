@@ -2,7 +2,7 @@ Vidit Nagpurkar
 
 25B1270
 
-##Implementation
+#Implementation
 
 Implementation, specifically in week-2 centers on a custom implementation of Linear Regression.
 
@@ -23,7 +23,7 @@ For the non-linear dataset, Polynomial Expansion was implemented to be able to u
 Models were evaluated using metrics like Root-Mean Square Error and Mean-Absolute Error.
 
 
-##Learnings
+#Learnings
 
 
 Mastered the use of Google Colab and .ipynb files.
@@ -58,7 +58,7 @@ Understood Optimization through gradient descent to understand how models learn 
 
 
 
-##Challenges Overcome:
+#Challenges Overcome:
 
 
 
