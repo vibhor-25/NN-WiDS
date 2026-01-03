@@ -1,0 +1,112 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+"Fizz Buzz"
+
+for i in range(1,101):
+    if((i%5==0) and (i%3==0)):
+        print("FizzBuzz",end=" ")
+    elif(i%3==0):
+        print("Fizz",end=" ")
+    elif(i%5==0):
+        print("Buzz",end=" ")
+
+    else: print(i,end=" ")
+
+"Matrix Operations"
+
+# addition of matrices
+AS=np.random.randint(1,10,(3,3))
+BS=np.random.randint(1,10,(3,3))
+_sum=AS+BS
+SUM=np.zeros((3,3))
+for i in range(3):
+     for j in range(3):
+          SUM[i][j]=AS[i][j]+BS[i][j]
+
+print(SUM);print(_sum)
+
+#dot product of matrices(multiplication of two matrices)
+
+a=int(input("enter row of A "));b=int(input("enter common column/row "));c=int(input("enter column of B "))
+A=np.random.randint(1,10,(a,b))
+B=np.random.randint(1,10,(b,c))
+print(A); print(B)
+product=np.zeros((a,c))
+
+for i in range(a):
+        for j in range(c):
+            for k in range(b):
+                product[i][j]+=A[i][k]*B[k][j]
+
+Product=np.matmul(A,B)
+if((product==Product).all()):
+    print("both matched")
+    print(product); print(Product)
+
+#multiplication of matrices element wise
+AE=np.random.randint(1,10,(3,3))
+BE=np.random.randint(1,10,(3,3))
+elementwise=AE*BE
+EW=np.zeros((3,3))
+for i in range(3):
+     for j in range(3):
+          EW[i][j]=AE[i][j]*BE[i][j]
+
+print(elementwise);print(EW)
+
+# determinant of square matrix
+
+def determinant(A,n):
+    det=0
+    if(n==2):
+        return ((A[0][0]*A[1][1])-(A[0][1]*A[1][0]))
+
+
+    for j in range(n):
+       B=np.delete(np.delete(A,0,0),j,1)
+       det+=(((-1)**j)*A[0][j]*determinant(B,B.shape[0]))
+    return det
+
+a=int(input("enter row=column for square matrix "))
+Sq=np.random.randint(1,10,(a,a))
+
+print(Sq)
+print(determinant(Sq,a));print(np.linalg.det(Sq))
+
+"Pandas Manipulation"
+
+df=pd.read_csv("data_assg1.csv")
+df["new column"]=pd.cut(df["value"],bins=[0,0.3,0.7,1.0],labels=["Low","Medium","High"])
+df_new=df[df["new column"]!="Low"]
+print(df);print(df_new)
+df_new.to_csv("df_new.csv")
+
+"Plotting a curve"
+
+x=np.linspace(-20,20,100)
+y=x**3+2*x**2+3*x+2
+plt.plot(x,y)
+plt.axhline(0)
+plt.axvline(0)
+plt.grid(True)
+plt.show()
+
+x=np.linspace(-20,20,200)
+y = np.tan(x) / x
+x = x[x != 0]
+y[np.abs(y) > 70] = np.nan
+plt.plot(x,y)
+plt.axhline(0)
+plt.axvline(0)
+plt.grid(True)
+plt.show()
+
+y=np.linspace(-20,20,1000)
+x=np.sin(y)+3*y
+plt.plot(x,y)
+plt.axhline(0)
+plt.axvline(0)
+plt.grid(True)
+plt.show()
