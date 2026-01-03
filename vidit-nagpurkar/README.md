@@ -1,10 +1,7 @@
-# Project Report: Machine Learning Foundations
 **Name:** Vidit Nagpurkar  
 **ID:** 25B1270  
 
----
-
-## 1. Learning Phase & Technical Foundations
+## 1. Learnings
 
 ### Environment & Tooling
 * **Google Colab:** Mastered the use of Google Colab and `.ipynb` files for cloud-based development.
@@ -18,9 +15,7 @@
 * **Regression Analysis:** Studied Linear and Polynomial regression and understood the relationship between independent features and continuous target variables.
 * **Optimization Theory:** Understood optimization through gradient descent to understand how models learn by minimizing cost functions.
 
----
-
-## 2. Implementation Logic (Week 2)
+## 2. Implementation
 
 ### Optimization Strategy
 Implementation, specifically in week-2, centers on a custom implementation of **Linear Regression**. Rather than using high-level libraries, optimization was done using a from-scratch implementation of **Vectorized Gradient Descent**.
@@ -33,8 +28,6 @@ Implementation, specifically in week-2, centers on a custom implementation of **
 ### Model Expansion & Evaluation
 * **Polynomial Expansion:** For the non-linear dataset, Polynomial Expansion was implemented to be able to use the linear regression model for fitting the given quadratic curve.
 * **Evaluation Metrics:** Models were evaluated using metrics like Root-Mean Square Error (RMSE) and Mean-Absolute Error (MAE).
-
----
 
 ## 3. Challenges Overcome
 
